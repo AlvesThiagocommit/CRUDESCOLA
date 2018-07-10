@@ -17,7 +17,7 @@ class CreateStudentsTable extends Migration
             $table->increments('id');
             $table->string('id_aluno');
             $table->string('nome');
-            $table->date('data_de_nascimento');
+            $table->timestamps('data_de_nascimento');
             $table->string('logradouro');
             $table->string('numero_casa');
             $table->string('bairro');
@@ -25,7 +25,7 @@ class CreateStudentsTable extends Migration
             $table->string('estado');
             $table->string('cep');
             $table->string('id_curso');
-            $table->date('data_de_criacao');
+            $table->timestamps('data_de_criacao');
             $table->timestamps();
 
         });
