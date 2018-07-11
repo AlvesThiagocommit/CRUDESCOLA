@@ -25,7 +25,8 @@ class StudentController extends Controller
     		'lastname' => 'required',
     		'email' => 'required',
     		'phone' => 'required'
-    	]);
+        ]);
+        
     	$student = new Student;
     	$student->first_name = $request->firstname;
     	$student->last_name = $request->lastname;
