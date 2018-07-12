@@ -11,9 +11,9 @@
       <div class="navbar-collapse collapse navbar-responsive-collapse">
         <ul class="nav navbar-nav">
           <li class="active"><a href="{{ route('home') }}">Home</a></li>
-          <li><a href="{{ route('create') }}">Professor </a></li>
-          <li><a href="{{ route('create') }}">Curso</a></li>
-          <li><a href="{{ route('create') }}">Aluno</a></li>
+          <li><a href="{{ route('Professor\create') }}">Professor </a></li>
+          <li><a href="{{ route('Course\create') }}">Course</a></li>
+          <li><a href="{{ route('Student\create') }}">Student</a></li>
           
          
         </ul>

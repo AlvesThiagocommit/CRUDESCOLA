@@ -12,25 +12,25 @@
 */
 
 
-Route::get('/','StudentController@index')->name('home');
+Route::get('/','main@index')->name('home');
 
-//Aluno
-Route::get('create','StudentController@create')->name('create');
-Route::post('create','StudentController@store')->name('store');
-Route::get('edit/{id}','StudentController@edit')->name('edit');
-Route::post('update/{id}','StudentController@update')->name('update');
-Route::delete('delete/{id}','StudentController@delete')->name('delete');
+//Student
+Route::get('student/create','StudentController@create')->name('create');
+Route::post('student/create','StudentController@store')->name('store');
+Route::get('student/edit/{id}','StudentController@edit')->name('edit');
+Route::post('student/update/{id}','StudentController@update')->name('update');
+Route::delete('student/delete/{id}','StudentController@delete')->name('delete');
 
 //Professor
-Route::get('create','ProfessorController@create')->name('create');
-Route::post('create','ProfessorController@store')->name('store');
-Route::get('edit/{id}','ProfessorController@edit')->name('edit');
-Route::post('update/{id}','ProfessorController@update')->name('update');
-Route::delete('delete/{id}','ProfessorController@delete')->name('delete');
+Route::get('professor/create','ProfessorController@create')->name('create');
+Route::post('professor/create','ProfessorController@store')->name('store');
+Route::get('professor/edit/{id}','ProfessorController@edit')->name('edit');
+Route::post('professor/update/{id}','ProfessorController@update')->name('update');
+Route::delete('professor/delete/{id}','ProfessorController@delete')->name('delete');
 
 //Course
-Route::get('create','CourseController@create')->name('create');
-Route::post('create','CourseController@store')->name('store');
-Route::get('edit/{id}','CourseController@edit')->name('edit');
-Route::post('update/{id}','CourseController@update')->name('update');
-Route::delete('delete/{id}','CourseController@delete')->name('delete');
+Route::get('course/create','CourseController@create')->name('create');
+Route::post('course/create','CourseController@store')->name('store');
+Route::get('course/edit/{id}','CourseController@edit')->name('edit');
+Route::post('course/update/{id}','CourseController@update')->name('update');
+Route::delete('course/delete/{id}','CourseController@delete')->name('delete');
