@@ -30,7 +30,7 @@ class CourseController extends Controller
     	$course->nome = $request->nome;
     	$course->id_professor = $request->idprofessor;
     	$course->save();
-    	return redirect(route('home'))->with('successMsg','Professor Successfully Added');
+    	return redirect(route('home'))->with('successMsg','Curso adicionado com sucesso!');
 	}
 	
 	public function edit($id)
@@ -52,12 +52,12 @@ class CourseController extends Controller
     	$course->nome = $request->nome;
     	$course->id_professor = $request->idprofessor;
     	$course->save();
-    	return redirect(route('home'))->with('successMsg','Professor Successfully Update');
+    	return redirect(route('home'))->with('successMsg','Curso Atualizado com sucesso');
 	}
 	
 	public function delete($id)
     {
         Course::find($id)->delete();
-        return redirect(route('home'))->with('successMsg','Course Successfully Delete');
+        return redirect(route('home'))->with('successMsg','Curso Atualizado com sucesso');
     }
 }
