@@ -29,7 +29,7 @@ class ProfessorController extends Controller
     	$professor->nome = $request->nome;
     	$professor->data_nascimento = $request->datanascimento;
     	$professor->save();
-    	return redirect(route('home'))->with('successMsg','Aluno adicionado com sucesso!');
+    	return redirect(route('home'))->with('successMsg','Professor adicionado com sucesso!');
 	}
 	
 	public function edit($id)
@@ -48,12 +48,12 @@ class ProfessorController extends Controller
         $professor->nome = $request->nome;
     	$professor->data_nascimento = $request->datanascimento;
     	$professor->save();
-    	return redirect(route('home'))->with('successMsg','Aluno atualizado com sucesso!');
+    	return redirect(route('home'))->with('successMsg','Professor atualizado com sucesso!');
 	}
 	
 	public function delete($id)
     {
         Professor::find($id)->delete();
-        return redirect(route('home'))->with('successMsg','Aluno deletado com sucesso!');
+        return redirect(route('home'))->with('successMsg','Professor deletado com sucesso!');
     }
 }
