@@ -13,49 +13,89 @@
 
 		<div class="panel panel-default">
 			<div class="panel-heading">
-				<h3 class="panel-title">Add New Student</h3>
+				<h3 class="panel-title">Adicionar Novo Aluno</h3>
 			</div>
 			<div class="panel-body">
-				<form class="form-horizontal" action="{{ route('store') }}" method="POST">
+				<form class="form-horizontal" action="{{ route('store') }}" method="POST"> // Configurar rota para controller
 					{{ csrf_field() }}
 			  <fieldset>
 
 			  	<div class="form-group">
-			      <label for="firstname" class="col-md-2 control-label">First Name</label>
+			      <label for="nome" class="col-md-2 control-label">Nome</label>
 
 			      <div class="col-md-10">
-			        <input type="text" class="form-control" name="firstname" placeholder="First Name">
+			        <input type="text" class="form-control" name="nome" placeholder="Nome">
 			      </div>
 			    </div>
 
 			    <div class="form-group">
-			      <label for="lastname" class="col-md-2 control-label">Last Name</label>
+			      <label for="datadenascimento" class="col-md-2 control-label">Data de Nascimento</label>
 
 			      <div class="col-md-10">
-			        <input type="text" class="form-control" name="lastname" placeholder="Last Name">
+			        <input type="number" class="form-control" name="datadenascimento" placeholder="Data de Nascimento">
 			      </div>
 			    </div>
 
 			    <div class="form-group">
-			      <label for="inputEmail" class="col-md-2 control-label">Email</label>
+			      <label for="logradouro" class="col-md-2 control-label">Logradouro</label>
 
 			      <div class="col-md-10">
-			        <input type="email" class="form-control" name="email" id="inputEmail" placeholder="Email">
+			        <input type="text" class="form-control" name="logradouro" placeholder="Logradouro">
 			      </div>
-			    </div>
-
-			    <div class="form-group">
-			      <label for="phone" class="col-md-2 control-label">Phone Number</label>
+					</div>
+					
+					<div class="form-group">
+			      <label for="numero" class="col-md-2 control-label">Numero</label>
 
 			      <div class="col-md-10">
-			        <input type="text" class="form-control" name="phone" placeholder="Phone">
+			        <input type="number" class="form-control" name="numero" placeholder="Numero">
 			      </div>
-			    </div>
+					</div>
+					
+					<div class="form-group">
+			      <label for="bairro" class="col-md-2 control-label">Bairro</label>
+
+			      <div class="col-md-10">
+			        <input type="text" class="form-control" name="bairro" placeholder="Bairro">
+			      </div>
+					</div>
+					
+					<div class="form-group">
+			      <label for="cidade" class="col-md-2 control-label">Cidade</label>
+
+			      <div class="col-md-10">
+			        <input type="text" class="form-control" name="cidade" placeholder="Cidade">
+			      </div>
+					</div>
+					
+					<div class="form-group">
+			      <label for="estado" class="col-md-2 control-label">Estado</label>
+
+			      <div class="col-md-10">
+			        <input type="text" class="form-control" name="estado" placeholder="Estado">
+			      </div>
+					</div>
+					
+					<div class="form-group">
+			      <label for="cep" class="col-md-2 control-label">CEP</label>
+
+			      <div class="col-md-10">
+			        <input type="number" class="form-control" name="cep" placeholder="CEP">
+			      </div>
+					</div>
+
+					<div class="form-group">
+			      <label for="idcurso" class="col-md-2 control-label">ID do Curso</label>
+
+			      <div class="col-md-10">
+			        <input type="number" class="form-control" name="idcurso" placeholder="ID do Curso">
+			      </div>
+					</div>
 
 			    <div class="form-group">
 			      <div class="col-md-10 col-md-offset-2">
-			        <button type="button" class="btn btn-default">Cancel</button>
-			        <button type="submit" class="btn btn-primary">Submit</button>
+			        <button type="button" class="btn btn-default">Cancelar</button>
+			        <button type="submit" class="btn btn-primary">Enviar</button>
 			      </div>
 			    </div>
 			  </fieldset>
