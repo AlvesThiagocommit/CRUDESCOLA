@@ -23,10 +23,10 @@
     @foreach ($students as $student)
   	<tr>
     	<td>{{ $student->id }}</td>
-    	<td>{{ $student->first_name }}</td>
-    	<td>{{ $student->last_name }}</td>
-    	<td>{{ $student->email }}</td>
-      <td>{{ $student->phone }}</td>
+    	<td>{{ $student->nome }}</td>
+    	<td>{{ $student->curso }}</td>
+    	<td>{{ $student->professor }}</td>
+      <td>{{ $student->created_at }}</td>
     	<td class="text-center"><a class="btn btn-raised btn-primary btn-sm" href="{{ route('edit',$student->id) }}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a> || 
           <form method="POST" id="delete-form-{{ $student->id }}" action="{{ route('delete',$student->id) }}" style="display: none;"> 
             {{ csrf_field() }}

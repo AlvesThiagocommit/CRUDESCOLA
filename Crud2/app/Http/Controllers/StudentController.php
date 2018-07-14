@@ -10,7 +10,7 @@ class StudentController extends Controller
     public function index()
     {
         $students = Student::paginate(5);
-    	return view('welcome',compact('students'));
+    	return view('index',compact('students'));
     }
 
     public function create()
@@ -28,7 +28,9 @@ class StudentController extends Controller
             'bairro' => 'required',
     		'cidade' => 'required',
     		'estado' => 'required',
-    		'cep' => 'required'
+            'cep' => 'required',
+            'curso' => 'required',
+            'professor' => 'required'
         ]);
         
     	$student = new Student;
@@ -39,7 +41,9 @@ class StudentController extends Controller
         $student->bairro = $request->bairro;
     	$student->cidade = $request->cidade;
     	$student->estado = $request->estado;
-    	$student->cep = $request->cep;
+        $student->cep = $request->cep;
+        $student->curso = $request->curso;
+        $student->professor = $request->professor;
     	$student->save();
     	return redirect(route('home'))->with('successMsg','Aluno adicionado com sucesso!');
 	}
@@ -60,7 +64,9 @@ class StudentController extends Controller
             'bairro' => 'required',
     		'cidade' => 'required',
     		'estado' => 'required',
-    		'cep' => 'required'
+            'cep' => 'required',
+            'curso' => 'required',
+            'professor' => 'required'
         ]);
         $student = Student::find($id);
         $student->nome = $request->nome;
@@ -70,7 +76,9 @@ class StudentController extends Controller
         $student->bairro = $request->bairro;
     	$student->cidade = $request->cidade;
     	$student->estado = $request->estado;
-    	$student->cep = $request->cep;
+        $student->cep = $request->cep;
+        $student->curso = $request->curso;
+        $student->professor = $request->professor;
     	$student->save();
     	return redirect(route('home'))->with('successMsg','Aluno atualizado com sucesso!');
 	}
